@@ -1,17 +1,20 @@
-import java.util.Arrays;
+package arrays;
 
-public class Main {
+public class CarryForwardArray {
     public static void main(String[] args) {
-
-        subSequenceAG();
-        leaderInArray();
-        subArrayMaxMin();
-        bestTimeToBuySell();
+        String ag="GAG";
+        subSequenceAG(ag);
+        int[] arr= {1,5,2,6,4,8};
+        leaderInArray(arr);
+        int[] arr1 = {8,8,8,8,8,8};
+        subArrayMaxMin(arr1);
+        int[] arr2= {7,1,5,3,6,4};
+        bestTimeToBuySell(arr2);
     }
 
-    private static void bestTimeToBuySell() {
+    private static void bestTimeToBuySell(int[] arr) {
 
-        int[] arr= ;
+
         int max = arr[0];
         int min = arr[0];
         int count=0;
@@ -32,8 +35,8 @@ public class Main {
 
     }
 
-    private static void subArrayMaxMin() {
-        int[] arr = {8,8,8,8,8,8};
+    private static void subArrayMaxMin(int[] arr) {
+
         int max = arr[0];
         int min = arr[0];
         int count=0;
@@ -69,8 +72,8 @@ public class Main {
         System.out.println("subArrayMaxMin count is: "+ans);
     }
 
-    private static void leaderInArray() {
-        int[] arr= {1,5,2,6,4,8};
+    private static void leaderInArray(int[] arr) {
+
         int max=arr[0];
         int count=1;
 
@@ -83,10 +86,9 @@ public class Main {
         System.out.println("leader in the array count is: "+count);
     }
 
-    private static void subSequenceAG() {
+    private static void subSequenceAG(String ag) {
         int count=0;
         int ans=0;
-        String ag="GAG";
         for(int i=0;i<ag.length();i++){
             if(ag.charAt(i)=='G'){
                 ans=ans+count;
