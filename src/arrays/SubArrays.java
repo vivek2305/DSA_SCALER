@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.stream.Stream;
+
 public class SubArrays {
     public static void main(String[] args) {
         int[] arr={2, 1, 3, 4, 5};
@@ -12,6 +14,7 @@ public class SubArrays {
 
         System.out.println("max sum value in sub array= "+maxSubArraySum(12,arr)); // need to check this method again.
     }
+
 
     private static int maxSubArraySum(int x, int[] arr) {
         int[] prefixSum = new int[arr.length];
